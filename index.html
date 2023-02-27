@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Calculadora de Renda Fixa</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+</head>
+<body>
+  <div class="wrapper">
+    <h1>Calculadora de Renda Fixa</h1>
+    <form method="POST" action="calculadora.php">
+      <label for="valor_principal">Valor Principal:</label>
+      <input type="text" name="valor_principal" required><br>
+
+      <label for="taxa_juros">Taxa de Juros (%):</label>
+      <input type="text" name="taxa_juros" required><br>
+
+      <label for="prazo">Prazo:</label>
+      <input type="text" name="prazo" required>
+      <select name="periodo" required>
+        <option value="anos">anos</option>
+        <option value="meses">meses</option>
+      </select><br>
+
+      <label for="tipo_calculo">Tipo de Cálculo:</label>
+      <select name="tipo_calculo" required>
+        <option value="simples">Simples</option>
+        <option value="composto">Composto</option>
+      </select><br>
+
+      <label for="contribuicao_mensal">Contribuição Mensal:</label>
+      <input type="text" name="contribuicao_mensal"><br>
+
+      <label for="imposto_renda">Imposto de Renda (%):</label>
+      <input type="text" name="imposto_renda"><br>
+
+      <button type="submit">Calcular</button>
+      
+    </form>
+    <button id="theme-button"><i class="fas fa-sun"></i></button>
+
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
